@@ -44,7 +44,7 @@ function abrirLightbox(elemento) {
 // compra productos
 function solicitarProducto(nombreProducto) {
     // Número de teléfono de la barbería
-    const telefono = "593981766228";
+    const telefono = "000123456789";
     
     // Construcción del mensaje para WhatsApp
     const mensaje = `¡Hola! %0A` +
@@ -83,7 +83,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
     // 1. Tu número de WhatsApp (sin el +)
-    const telBarberia = "593981766228"; 
+    const telBarberia = "1234567890"; 
 
     // 2. Obtener los datos (usando los IDs que ya configuramos)
     const nombre = document.getElementById('nombreC').value;

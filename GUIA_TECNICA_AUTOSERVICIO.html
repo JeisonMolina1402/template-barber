@@ -3,74 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual de Configuración - The Gentleman's Barber Club</title>
+    <title>Manual Maestro de Configuración - Barber Club</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #e0e0e0; background-color: #121212; max-width: 900px; margin: auto; padding: 40px; }
-        .container { background-color: #1a1a1a; padding: 30px; border-radius: 10px; border: 1px solid #d4af37; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-        h1 { color: #d4af37; text-align: center; text-transform: uppercase; letter-spacing: 2px; border-bottom: 2px solid #d4af37; padding-bottom: 10px; }
-        h2 { color: #d4af37; margin-top: 30px; border-left: 4px solid #d4af37; padding-left: 15px; }
-        p { margin-bottom: 15px; }
-        code { background-color: #2d2d2d; color: #f8f8f2; padding: 2px 6px; border-radius: 4px; font-family: 'Courier New', Courier, monospace; font-size: 0.9em; border: 1px solid #444; }
-        .warning { background-color: #332b00; border: 1px solid #d4af37; padding: 15px; border-radius: 5px; color: #ffd700; font-weight: bold; margin: 20px 0; }
-        .step { margin-bottom: 25px; padding: 20px; background: #252525; border-radius: 8px; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
-        .footer { text-align: center; margin-top: 50px; font-size: 0.8em; color: #777; border-top: 1px solid #333; padding-top: 20px; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.8; color: #e0e0e0; background-color: #0f0f0f; max-width: 1000px; margin: auto; padding: 40px; }
+        .card { background-color: #1a1a1a; padding: 30px; border-radius: 12px; border: 1px solid #d4af37; box-shadow: 0 10px 30px rgba(0,0,0,0.7); }
+        h1 { color: #d4af37; text-align: center; text-transform: uppercase; border-bottom: 2px solid #d4af37; padding-bottom: 15px; }
+        h2 { color: #d4af37; margin-top: 40px; border-left: 5px solid #d4af37; padding-left: 15px; background: rgba(212, 175, 55, 0.1); }
+        h3 { color: #f59e0b; margin-top: 25px; }
+        code { background-color: #2d2d2d; color: #f8f8f2; padding: 3px 8px; border-radius: 4px; font-family: monospace; border: 1px solid #444; }
+        .highlight { color: #ffd700; font-weight: bold; }
+        .note { background: #221a00; border: 1px solid #d4af37; padding: 20px; border-radius: 8px; color: #ffd700; margin: 25px 0; }
+        .file-tree { background: #000; padding: 15px; border-radius: 5px; font-family: monospace; color: #00ff00; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #333; padding: 12px; text-align: left; }
+        th { background: #222; color: #d4af37; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Manual de Usuario - Sin Soporte</h1>
-    
-    <p>Este documento contiene toda la información técnica necesaria para que usted mismo personalice y publique este template. Al adquirir este producto, el comprador asume la responsabilidad total de su edición.</p>
+<div class="card">
+    <h1>Manual Maestro de Configuración</h1>
+    <p>Este documento es la guía definitiva para personalizar cada rincón de su nueva plantilla web. Lea atentamente cada sección para realizar cambios sin necesidad de soporte técnico.</p>
 
-    <div class="warning">
-        AVISO IMPORTANTE: No se brinda soporte técnico personalizado. Si usted daña el código o las rutas de los archivos, deberá descargar nuevamente el archivo original de la plataforma de compra.
+    <div class="note">
+        <strong>REGLA DE ORO:</strong> Antes de modificar cualquier archivo, cree una copia de seguridad de la carpeta completa. Si el sitio deja de verse bien, simplemente restaure su copia de seguridad.
     </div>
 
-    <section class="step">
-        <h2>1. Edición de Textos y Datos</h2>
-        <p>Para cambiar nombres, descripciones o precios, abra los archivos <code>.html</code> con un editor de texto (se recomienda <strong>Visual Studio Code</strong> o <strong>Sublime Text</strong>).</p>
-        <ul>
-            <li><strong>Precios:</strong> Busque la etiqueta <code>$15.00</code> y cámbiela por su valor local.</li>
-            <li><strong>Dirección:</strong> Localice el texto dentro del <code>&lt;footer&gt;</code> al final de cada página.</li>
-            <li><strong>WhatsApp:</strong> Busque el enlace <code>href="https://wa.me/1234567890"</code> y reemplace los números después del <code>/</code> con su número (incluya código de país, sin el signo +).</li>
-        </ul>
-    </section>
+    <h2>1. Estructura de Archivos</h2>
+    <p>Para que el sitio funcione, los archivos deben mantener esta organización exacta:</p>
+    <div class="file-tree">
+        /Proyecto-Barberia<br>
+        ├── index.html (Página de Inicio)<br>
+        ├── Contactanos.html (Formularios y Mapa)<br>
+        ├── ... (Demás páginas .html)<br>
+        ├── /css (Estilos y Colores)<br>
+        ├── /images (Fotos y Logos)<br>
+        ├── /JavaScript (Lógica de WhatsApp y Animaciones)<br>
+        └── /logos (Marcas aliadas)
+    </div>
 
-    <section class="step">
-        <h2>2. Cambio de Imágenes y Logo</h2>
-        <p>Todas las imágenes se encuentran en la carpeta <code>/images</code>. Para que el sitio no se rompa, debe respetar lo siguiente:</p>
-        <ul>
-            <li><strong>Logo:</strong> Su nuevo logo debe llamarse exactamente <code>logo barber.png</code> y ser de formato PNG transparente.</li>
-            <li><strong>Fotos de Galería:</strong> Si reemplaza una foto, asegúrese de que la nueva tenga las mismas dimensiones (ejemplo: 800x600px) para mantener la alineación.</li>
-            <li><strong>Nombres de archivos:</strong> No use espacios ni tildes en los nombres de las fotos (ejemplo: use <code>corte_moderno.jpg</code>, NO <code>corte moderno.jpg</code>).</li>
-        </ul>
-    </section>
+    <h2>2. Edición de Textos y Contenido</h2>
+    <p>Abra los archivos <code>.html</code> con un editor (como Visual Studio Code).</p>
+    <h3>Cambiar Nombres y Títulos:</h3>
+    <p>Busque el texto entre etiquetas, por ejemplo: <code>&lt;h1&gt;Estamos Aquí para Atenderte&lt;/h1&gt;</code>. Cambie solo el texto central.</p>
+    <h3>Cambiar Precios:</h3>
+    <p>Localice los valores con el símbolo <code>$</code>. Ejemplo: <code>&lt;option&gt;Corte de Cabello - $15.00&lt;/option&gt;</code>. Edite el valor numérico a su conveniencia.</p>
 
-    <section class="step">
-        <h2>3. Publicación (Hosting)</h2>
-        <p>Usted puede subir estos archivos a cualquier hosting que soporte HTML estático:</p>
-        <ol>
-            <li>Suba el contenido completo del ZIP a la carpeta raíz de su servidor (usualmente llamada <code>public_html</code> o <code>www</code>).</li>
-            <li>Asegúrese de que el archivo <code>index.html</code> esté en la carpeta principal.</li>
-            <li>Verifique que las carpetas <code>/css</code>, <code>/images</code> y <code>/JavaScript</code> se hayan subido correctamente.</li>
-        </ol>
-    </section>
+    <h2>3. Personalización de WhatsApp (Vital)</h2>
+    <p>El sitio tiene dos tipos de envío a WhatsApp que debe configurar en el archivo <code>JavaScript/main.js</code>:</p>
+    <div class="step">
+        <p>1. Busque la línea: <span class="highlight">const telBarberia = "1234567890";</span></p>
+        <p>2. Reemplace el número entre comillas por su número completo (Código de país + número, sin el signo +).</p>
+        <p>3. Esto actualizará automáticamente el formulario de <strong>Reserva</strong> y el de <strong>Contacto</strong>.</p>
+    </div>
 
-    <section class="step">
-        <h2>4. Resolución de Problemas (FAQ)</h2>
-        <ul>
-            <li><strong>¿Por qué no se ven las fotos?</strong> Verifique que no haya movido las fotos fuera de la carpeta <code>/images</code>.</li>
-            <li><strong>¿Por qué no cargan los estilos (fondo blanco)?</strong> Asegúrese de no haber borrado la carpeta <code>/css</code>.</li>
-            <li><strong>¿El botón de WhatsApp no abre?</strong> Revise que el enlace empiece por <code>https://wa.me/</code> seguido de su número completo.</li>
-        </ul>
-    </section>
+    <h2>4. Gestión de Imágenes</h2>
+    <table>
+        <tr>
+            <th>Elemento</th>
+            <th>Ubicación / Nombre del archivo</th>
+            <th>Recomendación</th>
+        </tr>
+        <tr>
+            <td>Logo Principal</td>
+            <td><code>images/logo barber.png</code></td>
+            <td>Use formato PNG transparente.</td>
+        </tr>
+        <tr>
+            <td>Fotos Galería</td>
+            <td><code>images/barber1.jpg</code> hasta <code>barber6.jpg</code></td>
+            <td>Tamaño ideal: 800x600px.</td>
+        </tr>
+        <tr>
+            <td>Heros (Fondos)</td>
+            <td><code>images/contactanos/hero1.jpg</code></td>
+            <td>Use imágenes de alta resolución.</td>
+        </tr>
+    </table>
 
-    <div class="footer">
-        Template Diseñado por Jeison Molina. Todos los derechos reservados.<br>
-        Venta Final - Producto Auto-Gestionable.
+    <h2>5. Configuración del Mapa (Google Maps)</h2>
+    <p>Para cambiar la ubicación del mapa en <code>Contactanos.html</code>:</p>
+    <ol>
+        <li>Vaya a Google Maps y busque su dirección.</li>
+        <li>Haga clic en "Compartir" > "Insertar un mapa".</li>
+        <li>Copie solo el enlace que aparece dentro de <code>src="..."</code>.</li>
+        <li>Pegue ese enlace dentro de la etiqueta <code>&lt;iframe src="AQUÍ_VA_EL_LINK"&gt;</code> en su archivo HTML.</li>
+    </ol>
+
+    <h2>6. Colores y Estilos (Avanzado)</h2>
+    <p>Si desea cambiar el color dorado principal, abra <code>css/style.css</code> (o el CSS de la página correspondiente) y busque la sección <code>:root</code>:</p>
+    <code>--color_primario: #F59E0B;</code>
+    <p>Cambie el código Hexadecimal (#F59E0B) por el color de su preferencia.</p>
+
+    <h2>7. Publicación en Internet</h2>
+    <p>Una vez terminados los cambios:</p>
+    <ol>
+        <li>Suba todos los archivos de la carpeta raíz a su hosting (vía FTP o Panel de Control).</li>
+        <li>Asegúrese de que el archivo <code>index.html</code> no esté dentro de ninguna carpeta para que sea la página de entrada.</li>
+    </ol>
+
+    <div class="footer" style="text-align: center; padding: 40px; border-top: 1px solid #333; color: #777;">
+        © 2026 Template Profesional Barberia - Jeison Molina. <br>
+        Documento de autoservicio para el comprador final.
     </div>
 </div>
 
